@@ -1,0 +1,30 @@
+/*
+ * initial HTML and BODY rules
+ */
+
+ html {
+
+  font-size: 1rem;
+
+}
+
+html,
+body {
+
+  font: $copy-font-full;
+
+}
+
+body {
+
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // text-size-adjust: 100%;
+
+  /* NOTE: Font smoothing (non-standard) -- https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+
+  -webkit-font-smoothing: antialiased;
+
+}
+

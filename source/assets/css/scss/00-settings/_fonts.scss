@@ -1,3 +1,12 @@
 //
 // fonts
 //
+
+$special-font :         'Lato', sans-serif; 
+$copy-font :            'Open Sans', sans-serif; 
+
+$special-font-family :  $special-font, Helvetica, Arial, sans-serif; 
+$copy-font-family :     $copy-font, Helvetica, Arial, sans-serif; 
+
+$special-font-full :    normal normal normal 100%/1.5 $special-font-family; 
+$copy-font-full :       normal normal normal 100%/1.5 $copy-font-family; 

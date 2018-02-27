@@ -18,18 +18,20 @@
          url('../../assets/fonts/#{$font-file-name}.woff') format('woff'),                      // Modern Browsers
          url('../../assets/fonts/#{$font-file-name}.svg#svg#{$font-file-name}') format('svg');  // Legacy iOS
 
-    /* Support for all WebKit browsers. */
+    /* support for all WebKit browsers */
     -webkit-font-smoothing: antialiased;
 
-    /* Support for Safari and Chrome. */
+    /* support for Safari and Chrome. */
     // text-rendering: optimizeLegibility;
 
-    /* Support for Firefox. */
+    /* support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
 
-    /* Support for IE. */
+    /* support for IE. */
     font-feature-settings: 'liga';
     
   }
 
 }
+
+@include font-face(custom-icomoon, custom-icomoon);

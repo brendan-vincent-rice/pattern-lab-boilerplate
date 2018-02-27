@@ -1,0 +1,9 @@
+/*
+ * style elements when they're editable
+ */
+
+*[contenteditable=true] {
+
+  cursor: pointer;
+
+}

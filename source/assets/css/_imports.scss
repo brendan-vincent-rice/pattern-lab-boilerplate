@@ -1,47 +1,23 @@
-/*
-
-  CONTENTS
-
-  00. SETTINGS
-  Global...............Globally-available variables and config.
-
-  10. TOOLS
-  Mixins...............Useful mixins.
-
-  20. GENERIC
-  Normalize.css........A level playing field.
-  Box-sizing...........Better default `box-sizing`.
-
-  30. BASE
-  Headings.............H1–H6 styles.
-  Fonts................@font-face rules and font declarations.
-
-  40. OBJECTS
-  Wrappers.............Wrapping and constraining elements.
-
-  50. COMPONENTS
-  Page-head............The main page header.
-  Page-foot............The main page footer.
-  Buttons..............Button elements.
-
-  60. UTILITIES
-  Text.................Text helpers.
-
- */
-
 // SETTINGS
 @import "scss/00-settings/fonts"; 
 
- // TOOLS
- @import "scss/10-tools/font-face"; 
+// TOOLS
+@import "scss/10-tools/font-face"; 
 
 // GENERIC
 @import "scss/20-generic/normalize"; 
 @import "scss/20-generic/box-sizing"; 
+@import "scss/20-generic/generic"; 
 
 // BASE
 @import "scss/30-base/font-icons"; 
-@import "scss/30-base/fonts"; 
+
+// OBJECTS
+@import "scss/40-objects/wrappers"; 
 
 // COMPONENTS
 @import "scss/50-components/button"; 
+
+// UTILITIES
+@import "scss/60-utilities/text-utility"; 
+@import "scss/60-utilities/content-editable"; 

@@ -9,23 +9,23 @@ module.exports = function (grunt) {
   var path = require('path'),
       argv = require('minimist')(process.argv.slice(2));
 
-  // load all grunt tasks
+  /* 
+   * load all grunt tasks
+   */
+
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
-
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-compress');
-
   grunt.loadNpmTasks('grunt-parker');
 
-  /******************************************************
-   * PATTERN LAB CONFIGURATION
-  ******************************************************/
+  /*
+   * Pattern Lab configuration
+   */
 
-  //read all paths from our namespaced config file
   var config = require('./patternlab-config.json'),
     pl = require('patternlab-node')(config);
 
@@ -270,9 +270,9 @@ module.exports = function (grunt) {
 
   });
 
-  /******************************************************
-   * COMPOUND TASKS
-  ******************************************************/
+  /*
+   * Compound tasks
+   */
 
   grunt.registerTask('default', ['patternlab', 'css', 'copy', 'compress']);
 
@@ -281,6 +281,8 @@ module.exports = function (grunt) {
   grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
   
-  grunt.registerTask('css', ['sass', 'cssmin', 'postcss', 'parker']);
+  grunt.registerTask('css', ['sass', 'cssmin', 'postcss', 'parker']); 
+
+  grunt.registerTask('pl_css', ['pl', 'css']); 
 
 };

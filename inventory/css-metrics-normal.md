@@ -11,17 +11,17 @@
 ### ./public/assets/css/style.css
 
 - **Total Stylesheets:** 1
-- **Total Stylesheet Size:** 10612
-- **Total Rules:** 55
-- **Selectors Per Rule:** 1.6363636363636365
-- **Total Selectors:** 90
-- **Identifiers Per Selector:** 1.3333333333333333
-- **Specificity Per Selector:** 5.533333333333333
+- **Total Stylesheet Size:** 10695
+- **Total Rules:** 61
+- **Selectors Per Rule:** 1.5901639344262295
+- **Total Selectors:** 97
+- **Identifiers Per Selector:** 1.3195876288659794
+- **Specificity Per Selector:** 5.484536082474227
 - **Top Selector Specificity:** 30
 - **Top Selector Specificity Selector:** .btn:visited:hover
 - **Total Id Selectors:** 0
-- **Total Identifiers:** 116
-- **Total Declarations:** 117
+- **Total Identifiers:** 124
+- **Total Declarations:** 126
 - **Total Unique Colors:** 6
 - **Unique Colors:**
 	- `#FFFF00`
@@ -37,4 +37,4 @@
 
 * * *
 
-Last generated: Tue Feb 27 2018 10:51:43 by [grunt-parker](https://github.com/leny/grunt-parker).
+Last generated: Tue Feb 27 2018 13:29:55 by [grunt-parker](https://github.com/leny/grunt-parker).

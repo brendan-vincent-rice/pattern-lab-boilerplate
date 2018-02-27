@@ -33,29 +33,43 @@
 
         {
           
-          "class" : "font-normal", 
-          "text" : "Transport New Light (default)<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+          "class" : "u-font-special", 
+          "text" : "Lato<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
 
         }, 
 
         {
           
-          "class" : "font-medium", 
-          "text" : "Transport New Medium<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+          "class" : "u-font-special", 
+          "text" : "<b>Lato (bold)<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</b>"
 
         }, 
 
         {
           
-          "class" : "font-heavy", 
-          "text" : "Transport New Heavy<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+          "class" : "u-font-special", 
+          "text" : "<i>Lato (italic)<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</i>"
 
         }, 
 
         {
           
-          "class" : "font-italic", 
-          "text" : "Transport New Italic<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+          "class" : "u-font-body", 
+          "text" : "Open Sans<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+
+        }, 
+
+        {
+          
+          "class" : "u-font-body", 
+          "text" : "<b>Open Sans (bold)<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</b>"
+
+        }, 
+
+        {
+          
+          "class" : "u-font-body", 
+          "text" : "<i>Open Sans (italic)<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</i>"
 
         }
 
