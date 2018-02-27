@@ -14,6 +14,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-compress');
+
+
   /******************************************************
    * PATTERN LAB CONFIGURATION
   ******************************************************/
@@ -64,9 +70,59 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
-    /******************************************************
-     * COPY TASKS
-    ******************************************************/
+    //
+    // Compile Sass to CSS
+    //
+
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          './public/assets/css/style.css': './source/assets/css/style.scss'
+        }
+      }
+    },
+
+    //
+    // Minify stylesheets
+    //
+
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1, 
+        sourceMap: true
+      },
+      target: {
+        files: {
+          './public/assets/css/style.min.css': ['./public/assets/css/style.css']
+        }
+      }
+    },
+
+    //
+    // Add CSS vendor prefixes
+    //
+
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')//, 
+          //require('cssnano')
+        ]
+      },
+      dist: {
+        src: ['./public/assets/css/style.css', './public/assets/css/style.min.css']
+      }
+    }, 
+
+    //
+    // Copy static assets to 'public' directory
+    //
+
     copy: {
       main: {
         files: [
@@ -83,9 +139,36 @@ module.exports = function (grunt) {
         ]
       }
     },
-    /******************************************************
-     * SERVER AND WATCH TASKS
-    ******************************************************/
+
+    //
+    // Compress static assets into a .zip
+    //
+    
+    compress: {
+      all: {
+        options: {
+          archive: 'prod-ready-assets/prod-ready-assets.zip'
+        },
+        files: [
+          {
+            src: [
+              'public/assets/**',
+              '!public/assets/images/people/*',
+              '!public/assets/js/**/_*.*',
+              '!public/assets/js/pattern-lab-only',
+              '!public/assets/js/pattern-lab-only.*',
+              '!public/assets/js/pattern-lab-only/*'
+            ],
+            dest: 'prod-ready-assets/'
+          }
+        ]
+      }
+    },
+    
+    //
+    // Local server and watch tasks
+    //
+
     watch: {
       all: {
         files: [
@@ -101,6 +184,7 @@ module.exports = function (grunt) {
         tasks: ['default', 'bsReload:css']
       }
     },
+
     browserSync: {
       dev: {
         options: {
@@ -143,18 +227,24 @@ module.exports = function (grunt) {
         }
       }
     },
+
     bsReload: {
       css: path.resolve(paths().public.root + '**/*.css')
     }
+
   });
 
   /******************************************************
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main']);
+  grunt.registerTask('default', ['patternlab', 'css', 'copy', 'compress']);
+
+  grunt.registerTask('pl', ['patternlab']);
   grunt.registerTask('patternlab:build', ['patternlab', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  
+  grunt.registerTask('css', ['sass', 'cssmin', 'postcss']);
 
 };

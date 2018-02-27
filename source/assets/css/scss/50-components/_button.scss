@@ -1,0 +1,50 @@
+/*
+ * button 
+ */
+
+.btn {
+  
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: #666;
+  background: #ebeced;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 11px 15px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all .2s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+
+  &:hover {
+    
+    color: #fff;
+    background: #ccc;
+    text-decoration: none;
+
+  }
+
+  &:visited { /* NOTE: including the :visited pseudo overrides SharePoint's :visited rule */
+
+    color: #666;
+    background: #ebeced;
+    border: 1px solid #ccc;
+    
+  }
+
+  &:visited:hover {
+
+    color: #fff;
+    background: #ccc;
+
+  }
+
+  &:focus {
+
+    outline: 1px dashed #666; 
+
+  }
+
+}

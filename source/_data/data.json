@@ -1,75 +1,547 @@
 {
-  "key": "value",
-  "key2": "use this for variables you want to load globally",
-  "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
-  "img": {
-    "avatar": {
-      "src": "http://placeimg.com/100/100/people",
-      "alt": "Avatar"
-    },
-    "square": {
-      "src": "http://placeimg.com/300/300/nature",
-      "alt": "Square"
-    },
-    "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
-      "alt": "Rectangle"
-    },
-    "landscape-4x3": {
-      "src": "http://placeimg.com/400/300/tech",
-      "alt": "4x3 Image"
-    },
-    "landscape-16x9": {
-      "src": "http://placeimg.com/640/360/tech",
-      "alt": "16x9 Image"
+
+  "html-class" : "", 
+
+  "title" : "", 
+
+  "body-class" : "", 
+  
+  "paragraph" : [
+
+    {
+
+      "text" : "By taking a unique longitudinal, long-term approach to data analytics, we provide a whole new depth of understanding and a higher level of insight."
     }
-  },
-  "headline": {
-    "short": "Lorizzle pimpin' dolizzle sit amet I",
-    "medium": "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"
-  },
-  "excerpt": {
-    "short": "Shizz fo shizzle mah nizzle fo rizzle, mah home g-dizzle, gravida vizzle, arcu. Pellentesque crunk tortizzle. Sed erizzle. Black izzle sheezy telliv.",
-    "medium": "Izzle crazy tempizzle sizzle. We gonna chung gangsta get down get down fo shizzle turpizzle. Away break it down black. Pellentesque bling bling rhoncus fo shizzle. In hac the bizzle platea dictumst. Black dapibizzle. Crackalackin.",
-    "long": "Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle. Crazy orci. Shut the shizzle up maurizzle get down get down, check out this a, go to hizzle sit amizzle, malesuada izzle, pede. Pellentesque gravida. Vestibulizzle check it out mi, volutpat izzle, shiz sed, shiznit sempizzle, da bomb. Funky fresh in ipsum. Da bomb volutpat felis vizzle daahng dawg. Crizzle quis dope izzle fo shizzle my ni."
-  },
-  "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
-  "url": "http://lorizzle.nl/",
-  "name": {
-    "first": "Junius",
-    "firsti": "J",
-    "middle": "Marius",
-    "middlei": "M",
-    "last": "Koolen",
-    "lasti": "K"
-  },
-  "year": {
-    "long": "2013",
-    "short": "13"
-  },
-  "month": {
-    "long": "January",
-    "short": "Jan",
-    "digit": "01"
-  },
-  "dayofweek": {
-    "long": "Sunday",
-    "short": "Sun"
-  },
-  "day": {
-    "long": "01",
-    "short": "1",
-    "ordinal": "st"
-  },
-  "hour": {
-    "long": "06",
-    "short": "6",
-    "military": "06",
-    "ampm": "am"
-  },
-  "minute": {
-    "long": "20",
-    "short": "20"
-  },
-  "seconds": "31"
+
+  ], 
+
+  "blockquote" : [
+
+    {
+
+      "cite" : ""
+
+    }
+
+  ], 
+
+  "fonts" : [
+
+    {
+
+      "paragraph" : [
+
+        {
+          
+          "class" : "font-normal", 
+          "text" : "Transport New Light (default)<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+
+        }, 
+
+        {
+          
+          "class" : "font-medium", 
+          "text" : "Transport New Medium<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+
+        }, 
+
+        {
+          
+          "class" : "font-heavy", 
+          "text" : "Transport New Heavy<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+
+        }, 
+
+        {
+          
+          "class" : "font-italic", 
+          "text" : "Transport New Italic<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "inline-text" : [
+
+    {
+
+      "paragraph" : [
+
+        {
+
+          "text" : "<a href='#'>This is a text link</a>"
+
+        }, 
+
+        {
+
+          "text" : "<strong>Strong is used to indicate strong importance</strong>"
+
+        }, 
+
+        {
+
+          "text" : "<em>This text has added emphasis</em>"
+
+        }, 
+
+        {
+
+          "text" : "The <b>b element</b> is stylistically different text from normal text, without any special importance"
+
+        }, 
+
+        {
+
+          "text" : "The <i>i element</i> is text that is set off from the normal text"
+
+        }, 
+
+        {
+
+          "text" : "The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation"
+
+        }, 
+
+        {
+
+          "text" : "<del>This text is deleted</del> and <ins>This text is inserted</ins>"
+
+        }, 
+
+        {
+
+          "text" : "<s>This text has a strikethrough</s>"
+
+        }, 
+
+        {
+
+          "text" : "Superscript<sup>&reg;</sup>"
+
+        }, 
+
+        {
+
+          "text" : "Subscript for things like H<sub>2</sub>O"
+
+        },
+
+        {
+
+          "text" : "<small>This small text is small for for fine print, etc.</small>TEXT"
+
+        }, 
+
+        {
+
+          "text" : "Abbreviation: <abbr title='HyperText Markup Language'>HTML</abbr>"
+
+        }, 
+
+        {
+
+          "text" : "Keybord input: <kbd>Cmd</kbd>"
+
+        }, 
+
+        {
+
+          "text" : "<q cite='https://google.com'>This text is a short inline quotation</q>"
+
+        }, 
+
+        {
+
+          "text" : "<cite>This is a citation</cite>"
+
+        }, 
+
+        {
+
+          "text" : "The <dfn>dfn element</dfn> indicates a definition."
+
+        }, 
+
+        {
+
+          "text" : "The <mark>mark element</mark> indicates a highlight"
+
+        }, 
+
+        {
+
+          "text" : "<code>This is what inline code looks like.</code>"
+
+        }, 
+
+        {
+
+          "text" : "<samp>This is sample output from a computer program</samp>"
+
+        }, 
+
+        {
+
+          "text" : "The <var>variable element</var>, such as <var>x</var> = <var>y</var>"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "text-sizes" : [
+
+    {
+
+      "paragraph" : [
+
+        {
+          
+          "class" : "u-font-size u-font-size--alpha", 
+          "text" : "Alpha &ndash; u-font-size u-font-size--alpha"
+
+        }
+      
+      ]
+
+    }
+
+  ], 
+
+  "text-colors" : [
+
+    {
+
+      "paragraph" : [
+
+        {
+
+          "text" : "u-text-core-black"
+
+        }, 
+
+        {
+
+          "text" : "u-text-core-blue"
+
+        }, 
+
+        {
+
+          "text" : "u-text-core-gray"
+
+        }
+
+      ]
+
+    }
+
+  ], 
+
+  "headings" : [
+
+    {
+
+      "tag" : "h1", 
+      "class" : "heading heading--alpha", 
+      "text" : "Heading alpha"
+
+    }, 
+    
+    {
+
+      "tag" : "h1", 
+      "class" : "heading heading--beta", 
+      "text" : "Heading beta"
+
+    }, 
+    
+    {
+
+      "tag" : "h1", 
+      "class" : "heading heading--gamma", 
+      "text" : "Heading gamma"
+
+    }, 
+    
+    {
+
+      "tag" : "h1", 
+      "class" : "heading heading--delta", 
+      "text" : "Heading delta"
+
+    }, 
+    
+    {
+
+      "tag" : "h1", 
+      "class" : "heading heading--epsilon", 
+      "text" : "Heading epsilon"
+
+    }, 
+    
+    {
+
+      "tag" : "h1", 
+      "class" : "heading heading--zeta", 
+      "text" : "Heading zeta"
+
+    }
+
+  ], 
+
+  "list" : [
+
+    {
+
+      "type" : "ul", 
+      "class" : "",
+      "item" : [
+
+        {
+
+          "class" : "",
+          "text" : "This is a list item in an ordered list"
+
+        },
+
+        {
+          
+          "class" : "",
+          "text" : "An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters."
+
+        }, 
+
+        {
+          
+          "class" : "",
+          "text" : "Lists can be nested inside of each other", 
+          "sub-list" : [
+            
+            {
+        
+              "type" : "ul", 
+              "class" : "",
+              "item" : [
+        
+                {
+        
+                  "class" : "",
+                  "text" : "This is a nested list item"
+        
+                }, 
+
+                {
+
+                  "class" : "", 
+                  "text" : "This is another nested list item in an ordered list"
+
+                }
+
+              ]
+
+            }
+
+          ]
+
+        }, 
+
+        {
+
+          "class" : "", 
+          "text" : "This is the last list item"
+
+        }
+        
+      ]
+
+    }
+
+  ],
+
+  "ordered-list" : [
+
+    {
+
+      "list" : [
+        
+        {
+    
+          "type" : "ol", 
+          "class" : "",
+          "item" : [
+    
+            {
+    
+              "class" : "",
+              "text" : "This is a list item in an ordered list"
+    
+            },
+    
+            {
+              
+              "class" : "",
+              "text" : "An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters."
+    
+            }, 
+    
+            {
+              
+              "class" : "",
+              "text" : "Lists can be nested inside of each other", 
+              "sub-list" : [
+                
+                {
+            
+                  "type" : "ol", 
+                  "class" : "",
+                  "item" : [
+            
+                    {
+            
+                      "class" : "",
+                      "text" : "This is a nested list item"
+            
+                    }, 
+    
+                    {
+    
+                      "class" : "", 
+                      "text" : "This is another nested list item in an ordered list"
+    
+                    }
+    
+                  ]
+    
+                }
+    
+              ]
+    
+            }, 
+    
+            {
+    
+              "class" : "", 
+              "text" : "This is the last list item"
+    
+            }
+            
+          ]
+    
+        }
+    
+      ]
+
+    }
+  
+  ], 
+
+  "button" : [
+
+    {
+
+      "a-element" : [
+
+        {
+
+          "class" : "btn", 
+          "url" : "", 
+          "text" : "Button / Link"
+
+        }, 
+
+        {
+      
+          "class" : "btn btn--w-icon btn--w-icon-right", 
+          "url" : "", 
+          "text" : "Button Link / Icon"
+    
+        }, 
+
+        {
+      
+          "class" : "btn btn--w-icon btn--w-icon-left", 
+          "url" : "", 
+          "text" : "Button / Link / Icon"
+    
+        } 
+
+      ]
+
+    }, 
+
+    {
+
+      "button-element" : [
+
+        {
+
+          "class" : "btn", 
+          "url" : "", 
+          "text" : "Button / Button"
+
+        }, 
+
+        {
+      
+          "class" : "btn btn--w-icon btn--w-icon-right", 
+          "url" : "", 
+          "text" : "Button / Button / Icon"
+    
+        }, 
+
+        {
+      
+          "class" : "btn btn--w-icon btn--w-icon-left", 
+          "url" : "", 
+          "text" : "Button / Button / Icon"
+    
+        } 
+
+      ]
+
+    }, 
+
+    {
+
+      "input-element" : [
+
+        {
+
+          "class" : "btn", 
+          "url" : "", 
+          "value" : "Button / Input"
+
+        }, 
+
+        {
+      
+          "class" : "btn btn--w-icon btn--w-icon-right", 
+          "url" : "", 
+          "value" : "Button / Input / Icon"
+    
+        }, 
+
+        {
+      
+          "class" : "btn btn--w-icon btn--w-icon-left", 
+          "url" : "", 
+          "value" : "Button / Input / Icon"
+    
+        } 
+
+      ]
+
+    }
+
+  ]
+
 }
