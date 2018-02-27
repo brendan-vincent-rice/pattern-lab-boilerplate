@@ -19,6 +19,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
+  grunt.loadNpmTasks('grunt-parker');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -116,6 +117,33 @@ module.exports = function (grunt) {
       },
       dist: {
         src: ['./public/assets/css/style.css', './public/assets/css/style.min.css']
+      }
+    }, 
+
+    //
+    // Analyze CSS
+    //
+
+    parker: {
+      normal: {
+        options: {
+          file: "./inventory/css-metrics-normal.md",
+          colophon: true,
+          usePackage: true
+        },
+        src: [
+          './public/assets/css/style.css'
+        ]
+      }, 
+      minified: {
+        options: {
+          file: "./inventory/css-metrics-minified.md",
+          colophon: true,
+          usePackage: true
+        },
+        src: [
+          './public/assets/css/style.min.css'
+        ]
       }
     }, 
 
@@ -245,6 +273,6 @@ module.exports = function (grunt) {
   grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
   
-  grunt.registerTask('css', ['sass', 'cssmin', 'postcss']);
+  grunt.registerTask('css', ['sass', 'cssmin', 'postcss', 'parker']);
 
 };
