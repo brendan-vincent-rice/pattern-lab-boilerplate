@@ -20,7 +20,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-compress');
-  grunt.loadNpmTasks('grunt-parker');
+  grunt.loadNpmTasks('grunt-parker'); 
+  grunt.loadNpmTasks('grunt-image');
 
   /*
    * Pattern Lab configuration
@@ -166,13 +167,44 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js.map', dest: path.resolve(paths().public.js) },
           //{ expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css', dest: path.resolve(paths().public.css) },        
           { expand: true, cwd: path.resolve(paths().source.css), src: '**/*.css.map', dest: path.resolve(paths().public.css) },
-          { expand: true, cwd: path.resolve(paths().source.images), src: '**/*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '**/*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
-          // slightly inefficient to do this again - I am not a grunt glob master. someone fix
           { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
         ]
+      }
+    }, 
+
+    //
+    // Optimize images
+    // https://www.npmjs.com/package/grunt-image
+
+    image: {
+      static: {
+        options: {
+          optipng: false,
+          pngquant: true,
+          zopflipng: true,
+          jpegRecompress: false,
+          mozjpeg: true,
+          guetzli: false,
+          gifsicle: true,
+          svgo: true
+        },
+        files: {
+          'dist/img.png': 'src/img.png',
+          'dist/img.jpg': 'src/img.jpg',
+          'dist/img.gif': 'src/img.gif',
+          'dist/img.svg': 'src/img.svg'
+        }
+      },
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'source/assets/images/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: 'public/assets/images/'
+        }]
       }
     },
 
@@ -274,15 +306,15 @@ module.exports = function (grunt) {
    * Compound tasks
    */
 
-  grunt.registerTask('default', ['patternlab', 'css', 'copy', 'compress']);
+  grunt.registerTask('default', ['patternlab', 'css', 'copy', 'compress', 'image:dynamic']);
 
   grunt.registerTask('pl', ['patternlab']);
   grunt.registerTask('patternlab:build', ['patternlab', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
-  
-  grunt.registerTask('css', ['sass', 'cssmin', 'postcss', 'parker']); 
 
+  grunt.registerTask('css', ['sass', 'cssmin', 'postcss', 'parker']); 
+  
   grunt.registerTask('pl_css', ['pl', 'css']); 
 
 };

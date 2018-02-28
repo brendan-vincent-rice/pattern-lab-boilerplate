@@ -556,6 +556,57 @@
 
     }
 
+  ], 
+
+  "image-single-source" : [
+
+    {
+
+      "class" : "",
+      "alt-text" : "",
+      "src" : "../../assets/images/404-error.svg"
+
+    }
+
+  ], 
+  
+  "image-source-set" : [
+
+    {
+
+      "URL-1x" : "../../assets/images/sample-image@1x.jpg",
+      "URL-2x" : "../../assets/images/sample-image@2x.jpg",
+      "class" : "",
+      "alt-text" : ""
+
+    }
+
+  ],
+
+  "image-advanced" : [
+
+    {
+
+      "class" : "",
+      "breakpoint" : "30em",
+      "img-name-big" : "sample-image--train-station",
+      "img-name-small" : "sample-image--train-station-square",
+      "img-type" : "jpg", 
+      "alt" : ""
+
+    }
+
+  ],
+
+  "video" : [
+
+    {
+
+      "modifier" : "",
+      "url" : "https://www.youtube.com/embed/JIID_InOUdE"
+
+    }
+
   ]
 
 }

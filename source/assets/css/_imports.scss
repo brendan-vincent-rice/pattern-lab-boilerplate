@@ -1,5 +1,5 @@
 // SETTINGS
-@import "scss/00-settings/fonts"; 
+@import "scss/00-settings/font"; 
 
 // TOOLS
 @import "scss/10-tools/font-face"; 
@@ -10,13 +10,16 @@
 @import "scss/20-generic/generic"; 
 
 // BASE
-@import "scss/30-base/font-icons"; 
+@import "scss/30-base/heading"; 
+@import "scss/30-base/font-icon"; 
 
 // OBJECTS
-@import "scss/40-objects/wrappers"; 
+@import "scss/40-objects/wrapper"; 
 
 // COMPONENTS
 @import "scss/50-components/button"; 
+@import "scss/50-components/image"; 
+@import "scss/50-components/video"; 
 
 // UTILITIES
 @import "scss/60-utilities/text-utility"; 
